@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59B1121A272EBA5A0099F583 /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B11219272EBA5A0099F583 /* HealthViewController.swift */; };
+		59B1121C272EBA7C0099F583 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B1121B272EBA7C0099F583 /* EducationViewController.swift */; };
 		59B46451272C1C4E00F5A986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B46450272C1C4E00F5A986 /* AppDelegate.swift */; };
 		59B46453272C1C4E00F5A986 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B46452272C1C4E00F5A986 /* SceneDelegate.swift */; };
 		59B46455272C1C4E00F5A986 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B46454272C1C4E00F5A986 /* ViewController.swift */; };
@@ -16,10 +18,11 @@
 		59B46469272C1DA500F5A986 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B46468272C1DA500F5A986 /* Model.swift */; };
 		59B4646B272D7C1000F5A986 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B4646A272D7C1000F5A986 /* AccountViewController.swift */; };
 		59B4646D272DE85A00F5A986 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B4646C272DE85A00F5A986 /* MoreInfoViewController.swift */; };
-		59B4646F272DEC0800F5A986 /* ShowMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B4646E272DEC0800F5A986 /* ShowMoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59B11219272EBA5A0099F583 /* HealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
+		59B1121B272EBA7C0099F583 /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
 		59B4644D272C1C4E00F5A986 /* Homework 4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Homework 4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B46450272C1C4E00F5A986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59B46452272C1C4E00F5A986 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +34,6 @@
 		59B46468272C1DA500F5A986 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		59B4646A272D7C1000F5A986 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		59B4646C272DE85A00F5A986 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
-		59B4646E272DEC0800F5A986 /* ShowMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +90,8 @@
 				59B46454272C1C4E00F5A986 /* ViewController.swift */,
 				59B4646A272D7C1000F5A986 /* AccountViewController.swift */,
 				59B4646C272DE85A00F5A986 /* MoreInfoViewController.swift */,
-				59B4646E272DEC0800F5A986 /* ShowMoreViewController.swift */,
+				59B1121B272EBA7C0099F583 /* EducationViewController.swift */,
+				59B11219272EBA5A0099F583 /* HealthViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,9 +186,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				59B46455272C1C4E00F5A986 /* ViewController.swift in Sources */,
+				59B1121C272EBA7C0099F583 /* EducationViewController.swift in Sources */,
 				59B4646B272D7C1000F5A986 /* AccountViewController.swift in Sources */,
+				59B1121A272EBA5A0099F583 /* HealthViewController.swift in Sources */,
 				59B46451272C1C4E00F5A986 /* AppDelegate.swift in Sources */,
-				59B4646F272DEC0800F5A986 /* ShowMoreViewController.swift in Sources */,
 				59B4646D272DE85A00F5A986 /* MoreInfoViewController.swift in Sources */,
 				59B46453272C1C4E00F5A986 /* SceneDelegate.swift in Sources */,
 				59B46469272C1DA500F5A986 /* Model.swift in Sources */,

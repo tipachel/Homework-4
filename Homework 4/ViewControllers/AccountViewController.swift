@@ -17,8 +17,8 @@ class AccountViewController: UIViewController {
     
     @IBOutlet var logOutButton: UIButton!
     
-    var userInformation = BasicInfo!
   
+    var user: User!
        
     
     
@@ -27,11 +27,11 @@ class AccountViewController: UIViewController {
         
         logOutButton.layer.cornerRadius = 15
         
-        greetings.text = "Congratulations, \(userInformation.userName)!"
-        nameLabel.text = "Name: \(userInformation.firstName)"
-        lastNameLabel.text = "Lastname: \(userInformation.lastName)"
-        ageLabel.text = "Age: \(userInformation.age)"
-        eMailLabel.text = "eMail: \(userInformation.eMail)"
+        greetings.text = "Congratulations, \(user.userInfo.userName)!"
+        nameLabel.text = "Name: \(user.userInfo.firstName)"
+        lastNameLabel.text = "Lastname: \(user.userInfo.lastName)"
+        ageLabel.text = "Age: \(user.userInfo.age)"
+        eMailLabel.text = "eMail: \(user.userInfo.eMail)"
         
     }
     

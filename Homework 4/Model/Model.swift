@@ -14,12 +14,12 @@ struct User {
     
     }
 struct BasicInfo{
-    var userName: String = "User"
-    var password: String = "Password"
-    var firstName: String = "Daria"
-    var lastName: String = "Uglovskaya"
-    var age: Int = 27
-    var eMail: String = "d.uglovskaya@gmail.com"
+    var userName: String
+    var password: String
+    var firstName: String
+    var lastName: String
+    var age: Int
+    var eMail: String
 }
 struct HealthInfo{
     var height: Int

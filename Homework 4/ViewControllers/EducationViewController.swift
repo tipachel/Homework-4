@@ -1,5 +1,5 @@
 //
-//  ShowMoreViewController.swift
+//  EducationViewController.swift
 //  Homework 4
 //
 //  Created by Tipachel on 31.10.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ShowMoreViewController: UIViewController {
+class EducationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

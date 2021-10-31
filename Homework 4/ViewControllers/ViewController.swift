@@ -8,9 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-        
-    let user = BasicInfo(userName: "User", password: "Password", firstName: "Daria", lastName: "Uglovskaya", age: 27, eMail: "d.uglovskaya@gmail.com")
-
+    
+    let user = User(userInfo: BasicInfo(userName: "User", password: "Password",
+                    firstName: "Daria", lastName: "Uglovskaya",age: 27, eMail: "d.uglovskaya@gmail.com"),
+                    health: HealthInfo(height: 165, weight: 50.34 , bloodType: BloodType.four , rHFactor: RHFactor.positive ),
+                    education: EducationInfo(school: "№215", college: "HSE", courses: "Swiftbook,Yandex, Skillbox"))
+    
     
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -24,30 +27,32 @@ class ViewController: UIViewController {
         if userNameTF.text == "" && passwordTF.text == ""{
             showAlert(title: "Oops!",
                       message:"The fields is empty!")
-        }else if userNameTF.text != user.userName || passwordTF.text != user.password {
+        }else if userNameTF.text != user.userInfo.userName || passwordTF.text != user.userInfo.password {
             showAlert(title: "Oops!",
                       message: "User name or password is incorrect!")
         }
     }
     
     @IBAction func userNameReminder() {
-        showAlert(title: "Forgot your name", message: "Your name is \(user.userName)")
+        showAlert(title: "Forgot your name", message: "Your name is \(user.userInfo.userName)")
     }
     
     @IBAction func passwordReminder() {
-        showAlert(title: "Forgot your password", message: "Your password is \(user.password) ")
+        showAlert(title: "Forgot your password", message: "Your password is \(user.userInfo.password) ")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarController = segue.destination as! UITabBarController
-        guard let accountVC = segue.destination as? AccountViewController else {return}
-        let viewControllers = [ViewController() , AccountViewController() , MoreInfoViewController() ]
-        for viewController in viewControllers{
+        for viewController in tabBarController.viewControllers!{
             if let accountVC = viewController as? AccountViewController{
-                accountVC.userInformation = user
+                accountVC.user = user
+            }else if let navigationVC = viewController as? UINavigationController{
+                let moreInfoVC = navigationVC.topViewController as! MoreInfoViewController
+                moreInfoVC.user = user
             }
         }
     }
+    
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
