@@ -17,7 +17,7 @@ class AccountViewController: UIViewController {
     
     @IBOutlet var logOutButton: UIButton!
     
-    var userInformation = BasicInfo(userName: "User", password: "Password", firstName: "Daria", lastName: "Uglovskaya", age: 27, eMail: "d.uglovskaya@gmail.com")
+    var userInformation = BasicInfo!
   
        
     

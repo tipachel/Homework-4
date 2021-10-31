@@ -39,12 +39,15 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let accountVC = segue.destination as? AccountViewController else { return }
-    
-        accountVC.userInformation = user
-        
+        let tabBarController = segue.destination as! UITabBarController
+        guard let accountVC = segue.destination as? AccountViewController else {return}
+        let viewControllers = [ViewController() , AccountViewController() , MoreInfoViewController() ]
+        for viewController in viewControllers{
+            if let accountVC = viewController as? AccountViewController{
+                accountVC.userInformation = user
+            }
+        }
     }
-    
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
