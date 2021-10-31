@@ -18,7 +18,7 @@ class AccountViewController: UIViewController {
     @IBOutlet var logOutButton: UIButton!
     
   
-    var user: User!
+    var user = User.getInfo()
        
     
     
@@ -26,7 +26,7 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         
         logOutButton.layer.cornerRadius = 15
-        
+        print(user.userInfo.age)
         greetings.text = "Congratulations, \(user.userInfo.userName)!"
         nameLabel.text = "Name: \(user.userInfo.firstName)"
         lastNameLabel.text = "Lastname: \(user.userInfo.lastName)"

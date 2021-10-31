@@ -8,22 +8,22 @@
 import UIKit
 
 class HealthViewController: UIViewController {
-
+    
+    @IBOutlet var hightLabel: UILabel!
+    @IBOutlet var weightLabel: UILabel!
+    @IBOutlet var bloodTypeLabel: UILabel!
+    
+    let user = User.getInfo()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+    hightLabel.text = "Height: \(user.health.height) cm"
+    weightLabel.text = "Weight:\(user.health.weight) kg"
+    bloodTypeLabel.text = "BloodType:\(user.health.bloodType) \(user.health.rHFactor.rawValue)"
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
 }

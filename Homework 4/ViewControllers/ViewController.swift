@@ -9,10 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let user = User(userInfo: BasicInfo(userName: "User", password: "Password",
-                    firstName: "Daria", lastName: "Uglovskaya",age: 27, eMail: "d.uglovskaya@gmail.com"),
-                    health: HealthInfo(height: 165, weight: 50.34 , bloodType: BloodType.four , rHFactor: RHFactor.positive ),
-                    education: EducationInfo(school: "№215", college: "HSE", courses: "Swiftbook,Yandex, Skillbox"))
+    let user = User.getInfo()
     
     
     @IBOutlet var userNameTF: UITextField!
@@ -33,13 +30,14 @@ class ViewController: UIViewController {
         }
     }
     
+    
     @IBAction func userNameReminder() {
         showAlert(title: "Forgot your name", message: "Your name is \(user.userInfo.userName)")
     }
-    
     @IBAction func passwordReminder() {
         showAlert(title: "Forgot your password", message: "Your password is \(user.userInfo.password) ")
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarController = segue.destination as! UITabBarController
@@ -48,10 +46,11 @@ class ViewController: UIViewController {
                 accountVC.user = user
             }else if let navigationVC = viewController as? UINavigationController{
                 let moreInfoVC = navigationVC.topViewController as! MoreInfoViewController
-                moreInfoVC.user = user
+                 moreInfoVC.user = user
             }
         }
     }
+    
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
@@ -61,6 +60,7 @@ class ViewController: UIViewController {
     
     
 }
+
 
 extension ViewController {
     private func showAlert(title: String, message: String){

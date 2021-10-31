@@ -8,26 +8,17 @@
 import UIKit
 
 class MoreInfoViewController: UIViewController {
+
+    var user = User.getInfo()
     
-    var user: User!
-   
+    @IBOutlet var nameLabel: UILabel!
     
-    @IBOutlet var userNameLabel: UILabel!
     
     override func viewDidLoad() {
+      
         super.viewDidLoad()
-        
-        userNameLabel.text = user.userInfo.userName
-        
-    
-        
+
+        nameLabel.text = user.userInfo.firstName + " " + user.userInfo.lastName
     }
-    @IBAction func healthButton() {
-        
-    }
-    @IBAction func educationButton() {
-    }
-    
-    
 }
 

@@ -8,22 +8,20 @@
 import UIKit
 
 class EducationViewController: UIViewController {
-
+ 
+    var user = User.getInfo()
+    @IBOutlet var schoolLabel: UILabel!
+    @IBOutlet var collegeLabel: UILabel!
+    @IBOutlet var coursesLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        schoolLabel.text = "School:\(user.education.school)"
+        collegeLabel.text = "College:\(user.education.college)"
+        coursesLabel.text = "Courses:\(user.education.courses)"
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

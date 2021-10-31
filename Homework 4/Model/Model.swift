@@ -28,17 +28,37 @@ struct HealthInfo{
     var rHFactor: RHFactor
 }
 enum BloodType: String {
-    case one = "O"
-    case two = "A"
-    case three = "B"
-    case four = "AB"
+    case O
+    case A
+    case B
+    case AB
 }
 enum RHFactor: Character{
     case positive = "+"
     case negative = "-"
 }
 struct EducationInfo{
-    var school: String
-    var college: String
-    var courses: String
+    var school:String
+    var college:String
+    var courses:String
+}
+
+extension User{
+    static func getInfo()-> User{
+        return
+            User(
+                userInfo: BasicInfo(userName: "User",
+                                    password: "Password",
+                                    firstName: "Daria",
+                                    lastName: "Uglovskaya",
+                                    age: 27,
+                                    eMail: "d.uglovskaya@gmail.com"),
+                health: HealthInfo(height: 165,
+                                   weight: 50.3,
+                                   bloodType: BloodType.AB,
+                                   rHFactor: RHFactor.positive),
+                education: EducationInfo(school: "№215", college: "HSE", courses: "Swiftbook, Yandex"))
+        
+    }
+    
 }
