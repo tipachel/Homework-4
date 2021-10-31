@@ -8,14 +8,18 @@
 import UIKit
 
 class MoreInfoViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
+        
+    }
+    @IBAction func healthButton() {
+    }
+    @IBAction func educationButton() {
     }
     
-
-   // MARK: - Navigation
-
+    
+    
 }
+

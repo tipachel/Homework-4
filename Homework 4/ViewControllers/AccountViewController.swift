@@ -10,15 +10,28 @@ import UIKit
 class AccountViewController: UIViewController {
     
     @IBOutlet var greetings: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var lastNameLabel: UILabel!
+    @IBOutlet var ageLabel: UILabel!
+    @IBOutlet var eMailLabel: UILabel!
+    
     @IBOutlet var logOutButton: UIButton!
     
-    var username:String!
+    var userInformation = BasicInfo(userName: "User", password: "Password", firstName: "Daria", lastName: "Uglovskaya", age: 27, eMail: "d.uglovskaya@gmail.com")
+  
+       
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         logOutButton.layer.cornerRadius = 15
-        greetings.text = "Congratulations, \(username ?? "")!"
+        
+        greetings.text = "Congratulations, \(userInformation.userName)!"
+        nameLabel.text = "Name: \(userInformation.firstName)"
+        lastNameLabel.text = "Lastname: \(userInformation.lastName)"
+        ageLabel.text = "Age: \(userInformation.age)"
+        eMailLabel.text = "eMail: \(userInformation.eMail)"
         
     }
     

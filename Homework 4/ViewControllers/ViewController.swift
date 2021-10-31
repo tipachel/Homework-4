@@ -8,9 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    let login = "User"
-    let password = "Password"
+        
+    let user = BasicInfo(userName: "User", password: "Password", firstName: "Daria", lastName: "Uglovskaya", age: 27, eMail: "d.uglovskaya@gmail.com")
+
     
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -24,24 +24,24 @@ class ViewController: UIViewController {
         if userNameTF.text == "" && passwordTF.text == ""{
             showAlert(title: "Oops!",
                       message:"The fields is empty!")
-        }else if userNameTF.text != login || passwordTF.text != password {
+        }else if userNameTF.text != user.userName || passwordTF.text != user.password {
             showAlert(title: "Oops!",
                       message: "User name or password is incorrect!")
         }
     }
     
     @IBAction func userNameReminder() {
-        showAlert(title: "Forgot your name", message: "Your name is \(login)")
+        showAlert(title: "Forgot your name", message: "Your name is \(user.userName)")
     }
     
     @IBAction func passwordReminder() {
-        showAlert(title: "Forgot your password", message: "Your password is \(password) ")
+        showAlert(title: "Forgot your password", message: "Your password is \(user.password) ")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let accountVC = segue.destination as? AccountViewController else { return }
-        
-        accountVC.username = userNameTF.text
+    
+        accountVC.userInformation = user
         
     }
     
